@@ -8,7 +8,7 @@ const orderitem = new moongose.Schema({
     orders: [],
     phoneNumber: Number,
     active: Boolean,
-    is: True
+    is: Boolean
 })
 
 const Order = moongose.model('orderitem', orderitem)
