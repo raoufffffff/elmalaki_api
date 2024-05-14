@@ -34,7 +34,8 @@ OrderRoute.put('/:id', async (req, res) => {
 })
 
 OrderRoute.post('/', async (req, res) => {
-    const { body } = req
+    let { body } = req
+    body.is = true
     try {
         const result = await Order.create(body)
         res.status(200).send({ data: result, length: result.length, post: true })
